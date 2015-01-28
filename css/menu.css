@@ -1,0 +1,318 @@
+	/*Déclaration Polices*/
+
+	@font-face {
+		font-family: 'icomoon';
+		src:url('../fonts/icomoon.eot');
+		src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+			url('../fonts/icomoon.woff') format('woff'),
+			url('../fonts/icomoon.ttf') format('truetype'),
+			url('../fonts/icomoon.svg#icomoon') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+
+		a {
+			/*color: #ccc;*/
+			text-decoration: none;
+		}
+			a:hover {
+			color: #fff;
+		}
+		
+		.colonne {
+			float: left;
+			/*width: 0%;*/
+			padding: 2em 2em;
+			/*min-height: 300px;
+			min-width: 31.250em;*/
+			position: absolute;
+			z-index: 100; /* ORDRE A CHANGER*/
+		}
+
+	/* Styles communs du menu */
+
+	.menu-adaptateur {
+		width: 7.2%;
+		max-width: 18.750em;
+		float: left;
+		position: fixed;
+		-webkit-perspective: 62.500em;
+		perspective: 62.500em;
+		-webkit-perspective-origin: 50% 200%;
+		perspective-origin: 50% 200%;
+	}
+
+	/* .menu-adaptateur:first-child {
+		margin-right: 100px;
+	} */
+
+	.menu-adaptateur button {
+		background: white;
+		border: none;
+		border-radius:49%;
+		width: 3.5em;
+		height: 3.5em;
+		text-indent: -900em;
+		overflow: hidden;
+		position: relative;
+		cursor: pointer;
+		outline: none;
+		opacity:1; /* OPACITE CHANGEE*/
+	}
+
+	.menu-adaptateur button:hover,
+	.menu-adaptateur button.dl-active,
+	.menu-adaptateur ul {
+		background: #aaa;
+		opacity:1;
+		
+	}
+
+	.menu-adaptateur button:after {
+		content: '';
+		position: absolute;
+		width: 68%;
+		height: 0.313em;
+		background: #5f3671;
+		top: 0.9em;
+		left: 16%;
+		box-shadow: 
+			0 0.625em 0 #5f3671, 
+			0 1.250em 0 #5f3671;
+	}
+
+	.menu-adaptateur ul {
+		padding: 0;
+		list-style: none;
+		-webkit-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+	}
+
+	/* .menu-adaptateur li {
+		position: relative;
+	} */
+
+	.menu-adaptateur li a {
+		display: block;
+		position: relative;
+		padding: 0.938em 1.250em;
+		font-size: 1.000em;
+		line-height: 1.250em;
+		font-weight: 300;
+		color: #fff;
+		outline: none;
+	}
+
+	.no-touch .menu-adaptateur li a:hover {
+		background: rgba(255,248,213,0.1);
+	}
+
+	.menu-adaptateur li.dl-back > a {
+		padding-left: 1.875em;
+		background: rgba(0,0,0,0.1);
+	}
+
+	.menu-adaptateur li.dl-back:after,
+	/* .menu-adaptateur li > a:not(:only-child):after {
+		position: absolute;
+		top: 0;
+		line-height: 50px;
+		font-family: 'icomoon';
+		speak: none;
+		-webkit-font-smoothing: antialiased;
+		content: "\e000";
+	} */
+
+	.menu-adaptateur li.dl-back:after {
+		left: 0.625em;
+		color: rgba(212,204,198,0.3);
+		-webkit-transform: rotate(180deg);
+		transform: rotate(180deg);
+	}
+
+	.menu-adaptateur li > a:after {
+		right: 0.625em;
+		color: rgba(0,0,0,0.15);
+	}
+
+	.menu-adaptateur .menu {
+		margin: 1.000em 0 0 0;
+		position: absolute;
+		opacity: 0;
+		pointer-events: none;
+		-webkit-transform: translateY(0.625em);
+		transform: translateY(0.625em);
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+	}
+
+	.menu-adaptateur .menu.menu-toggle {
+		transition: all 0.3s ease;
+	}
+
+	.menu-adaptateur .menu.menuopen {
+		opacity: 1;
+		pointer-events: auto;
+		-webkit-transform: translateY(0px);
+		transform: translateY(0px);
+	}
+
+	/* Hide the inner submenus */
+	/*.menu-adaptateur li .dl-submenu {
+		display: none;
+	}
+
+	/* 
+	When a submenu is openend, we will hide all li siblings.
+	For that we give a class to the parent menu called "dl-subview".
+	We also hide the submenu link. 
+	The opened submenu will get the class "dl-subviewopen".
+	All this is done for any sub-level being entered.
+	*/
+	/*.menu.dl-subview li,
+	.menu.dl-subview li.dl-subviewopen > a,
+	.menu.dl-subview li.dl-subview > a {
+		display: none;
+	}
+
+	.menu.dl-subview li.dl-subview,
+	.menu.dl-subview li.dl-subview .dl-submenu,
+	.menu.dl-subview li.dl-subviewopen,
+	.menu.dl-subview li.dl-subviewopen > .dl-submenu,
+	.menu.dl-subview li.dl-subviewopen > .dl-submenu > li {
+		display: block;
+	}
+
+	/* Dynamically added submenu outside of the menu context */
+	/* .menu-adaptateur > .dl-submenu {
+		position: absolute;
+		width: 100%;
+		top: 50px;
+		left: 0;
+		margin: 0;
+	}
+	 */
+	/* Animation classes for moving out and in */
+
+	.menu.dl-animate-out-1 {
+		-webkit-animation: MenuAnimOut1 0.4s;
+		animation: MenuAnimOut1 0.4s;
+	}
+
+	@-webkit-keyframes MenuAnimOut1 {
+		0% { }
+		50% {
+			-webkit-transform: translateZ(-250px) rotateY(30deg);
+		}
+		75% {
+			-webkit-transform: translateZ(-372.1.000em) rotateY(15deg);
+			opacity: .5;
+		}
+		100% {
+			-webkit-transform: translateZ(-500px) rotateY(0deg);
+			opacity: 0;
+		}
+	}
+
+	@keyframes MenuAnimOut1 {
+		0% { }
+		50% {
+			-webkit-transform: translateZ(-250px) rotateY(30deg);
+			transform: translateZ(-250px) rotateY(30deg);
+		}
+		75% {
+			-webkit-transform: translateZ(-372.1.000em) rotateY(15deg);
+			transform: translateZ(-372.1.000em) rotateY(15deg);
+			opacity: .5;
+		}
+		100% {
+			-webkit-transform: translateZ(-500px) rotateY(0deg);
+			transform: translateZ(-500px) rotateY(0deg);
+			opacity: 0;
+		}
+	}
+
+	.menu.dl-animate-in-1 {
+		-webkit-animation: MenuAnimIn1 0.3s;
+		animation: MenuAnimIn1 0.3s;
+	}
+
+	@-webkit-keyframes MenuAnimIn1 {
+		0% {
+			-webkit-transform: translateZ(-500px) rotateY(0deg);
+			opacity: 0;
+		}
+		20% {
+			-webkit-transform: translateZ(-250px) rotateY(30deg);
+			opacity: 0.5;
+		}
+		100% {
+			-webkit-transform: translateZ(0px) rotateY(0deg);
+			opacity: 1;
+		}
+	}
+
+	@keyframes MenuAnimIn1 {
+		0% {
+			-webkit-transform: translateZ(-500px) rotateY(0deg);
+			transform: translateZ(-500px) rotateY(0deg);
+			opacity: 0;
+		}
+		20% {
+			-webkit-transform: translateZ(-250px) rotateY(30deg);
+			transform: translateZ(-250px) rotateY(30deg);
+			opacity: 0.5;
+		}
+		100% {
+			-webkit-transform: translateZ(0px) rotateY(0deg);
+			transform: translateZ(0px) rotateY(0deg);
+			opacity: 1;
+		}
+	}
+
+	/* No JS Fallback */
+	.no-js .menu-adaptateur .menu {
+		position: relative;
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
+	}
+
+	/*.no-js .menu-adaptateur li .dl-submenu {
+		display: block;
+	}*/
+
+	.no-js .menu-adaptateur li.dl-back {
+		display: none;
+	}
+
+	.no-js .menu-adaptateur li > a:not(:only-child) {
+		background: rgba(0,0,0,0.1);
+	}
+
+	.no-js .menu-adaptateur li > a:not(:only-child):after {
+		content: '';
+	}
+
+	/*Couleurs*/
+	.demo-1 .menu-adaptateur button {
+		background: white;
+	}
+
+	.demo-1 .menu-adaptateur button:hover,
+	.demo-1 .menu-adaptateur button.dl-active,
+	.demo-1 .menu-adaptateur ul {
+		background: black;
+	}
+
+	@media screen and (max-width: 46.0625em) {
+			.main {
+				padding: 0em;
+			}
+			.colonne {
+				width: 80%;
+				min-width: 50%;
+				min-height: 50%;
+				padding: 1em 1em; 
+			}
+		}

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+	<head>
+	
+		<meta charset="UTF-8" />
+		<title>Alexis Souchet Site Web</title>
+		<meta name="keywords" content="Digital, Pusblishing, responsive, html5, css, jquery, édition, numérique" />
+		<meta name="author" content="Alexis Souchet">
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+		<link rel="icon" type="image/png" href="faviconvh.png"/>
+		
+		<link rel="stylesheet" type="text/css" href="css/menu.css"/>
+		<link rel="stylesheet" href="css/normalize.css"> <!-- Styles pour Parallax 1 -->
+        <link rel="stylesheet" href="css/main.css"> <!-- Styles paralax 2 + autres éléments -->
+		<link rel="stylesheet" type="text/css" href="css/dialog-sally.css" />
+		<link rel="stylesheet" type="text/css" href="css/dialog.css" />
+		
+		<script src="js/modernizr.custom.js"></script> <!-- Modernizr : commun pour tous les plug-in-->
+		<script src="js/jquery.js"></script> 
+		<script src="js/classie.js"></script> <!-- Ressource JS pour Pop Up (dialog) -->
+		<script src="js/dialogFx.js"></script> <!-- Gestion JS pour Pop up (dialog) -->
+		<script src="js/snap.svg-min.js"></script> <!-- Ressource JS/SVG pour Pop Up (dialog) -->
+	</head>
+	<body>
+		<header>
+			 <!-- MENU -->
+			<div class="colonne">
+					<div id="menu" class="menu-adaptateur">
+						<button class="declencheur"></button>
+						<ul class="menu">
+							<li>
+								<a href="#slide-1">Accueil</a>
+							</li>
+							<li>
+								<a href="#slide-2">A propos</a>
+							</li>
+							<li>
+								<a href="#slide-3">Projets</a>
+							</li>	
+							<li>
+								<a href="#slide-4">Contact</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+		</header>
+		<div class="loading">  <!-- Parallax + elements page -->
+		<!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+		<div id="preload">
+	       	<img src="img/bcg_slide-1.jpg">
+	       	<img src="img/bcg_slide-2.jpg">
+	       	<img src="img/bcg_slide-3.jpg">
+	       	<img src="img/bcg_slide-4.jpg">
+       	</div>
+       	
+       	<main> <!-- Tag pour gestion Parallax avec JS -->
+			
+			<!-- ACCUEIL -->
+	        <section id="slide-1" class="homeSlide">
+	        	<div class="bcg" 
+	        		data-center="background-position: 50% 0px;" 
+	        		data-top-bottom="background-position: 50% -100px;" 
+	        		data-anchor-target="#slide-1"
+	        	>
+		        	<div class="hsContainer">
+			    		<div class="hsContent"
+						data-center="bottom: 200px; opacity: 1"
+						data-top="bottom: 1200px; opacity: 0"
+						data-anchor-target="#slide-1 img"
+						>
+							<img id="monogramme" src="img/monogramme.svg" class="monogramme">
+			    			<div id="scroll" class="boutonscroll"><a href="#slide-2"></a></div>
+						</div>
+		        	</div>
+	        	</div>
+		    </section>
+		    
+			<!-- A PROPOS -->
+			<section id="slide-2" class="homeSlide">
+				<div class="bcg" 
+					data-center="background-position: 50% 10px;" 
+					data-top-bottom="background-position: 50% -100px;" 
+					data-bottom-top="background-position: 50% 100px;" 
+					data-anchor-target="#slide-2"
+				>
+			    	<div class="hsContainer">
+			    		<div class="hsContent" 
+			    			data-center="opacity: 1" 
+			    			data-center-top="opacity: 0" 
+			    			data--100-bottom="opacity: 0;" 
+			    			data-anchor-target="#slide-2"
+			    		>
+							<!-- PRESENTATION PERSO-->
+							<img id="narcice" class="photo-as" src="img/as.svg">
+				    		<h4 style="margin-left:47%;color:white;">Alexis Souchet | Editeur crossmédia</h4>
+							<p style="margin-left:-5em;">Bonjour,</br></br>Je suis actuellement en première année de <a href="http://hypermedia.univ-paris8.fr/formations/mastercenietii/presentation/">Master Création et édition numériques</a>.
+							Grâce à mes formations dans les <a href="http://lyc-albert-bayet-tours.tice.ac-orleans-tours.fr/php5/cariboost_files/FM-IG-BTS_CIG.pdf">Industries Graphiques</a> et les <a href="http://www.ecole-estienne.paris/fr/formations/integrateur-et-gestionnaire-de-flux-numeriques">Flux numériques</a>, j'ai développé
+							des compétences opérationnelles dans les langages web et les créations sous logiciels Adobe.</br></br>
+							Par mon expérience de trois ans au sein d'<a href="http://www.hachette.com/">Hachette Livre</a>, je me suis enrichie de connaissances éditoriales et sur le format ePub
+							qui constituent à présent la principale facette de mon profil.
+							</p>
+							
+							<!-- COMPETENCES, source : http://w3lessons.info/2013/06/04/skill-bar-with-jquery-css3/-->
+							<div class="competences">
+								<p>Mes Compétences</p>
+
+								<div class="skillbar clearfix " data-percent="70%">
+									<div class="skillbar-title" style="background: #d35400;"><span>HTML5</span></div>
+									<div class="skillbar-bar" style="background: black;"></div>
+									<div class="skill-bar-percent">70%</div>
+								</div> <!-- /Skill Bar -->
+
+								<div class="skillbar clearfix " data-percent="65%">
+									<div class="skillbar-title" style="background: #2980b9;"><span>CSS3</span></div>
+									<div class="skillbar-bar" style="background: black;"></div>
+									<div class="skill-bar-percent">65%</div>
+								</div> <!-- /Skill Bar -->
+
+								<div class="skillbar clearfix " data-percent="35%">
+									<div class="skillbar-title" style="background: yellow;"><span>JavaScript</span></div>
+									<div class="skillbar-bar" style="background: black;"></div>
+									<div class="skill-bar-percent">35%</div>
+								</div> <!-- /Skill Bar -->
+
+								<div class="skillbar clearfix " data-percent="90%">
+									<div class="skillbar-title" style="background: #85b916;"><span>ePub</span></div>
+									<div class="skillbar-bar" style="background: black;"></div>
+									<div class="skill-bar-percent">90%</div>
+								</div> <!-- /Skill Bar -->
+
+								<div class="skillbar clearfix " data-percent="90%">
+									<div class="skillbar-title" style="background: #f8a319;"><span>Illustrator</span></div>
+									<div class="skillbar-bar" style="background: black;"></div>
+									<div class="skill-bar-percent">90%</div>
+								</div> <!-- /Skill Bar -->
+
+								<div class="skillbar clearfix " data-percent="90%">
+									<div class="skillbar-title" style="background: #124e8c;"><span>Photoshop</span></div>
+									<div class="skillbar-bar" style="background: black;"></div>
+									<div class="skill-bar-percent">90%</div>
+								</div> <!-- /Skill Bar -->
+								
+								<div class="skillbar clearfix " data-percent="90%">
+									<div class="skillbar-title" style="background: #ff3d90;"><span>InDesign</span></div>
+									<div class="skillbar-bar" style="background: black;"></div>
+									<div class="skill-bar-percent">90%</div>
+								</div> <!-- /Skill Bar -->
+							</div><!-- /Competences -->
+						</div> <!-- /hsContent -->
+			    	</div> <!-- /hsContainer -->
+			    </div> <!-- /bcg -->
+			</section>
+		</div>
+			<!-- PROJETS -->
+			<section id="slide-3" class="homeSlide">
+				<div class="bcg" 
+					data-center="background-position: 50% 10px;" 
+					data-top-bottom="background-position: 50% -100px;" 
+					data-bottom-top="background-position: 50% 100px;" 
+					data-anchor-target="#slide-3"
+				>
+			    	<div class="hsContainer">
+						<div class="hsContent" 
+							data-center="opacity: 1" 
+			    			data-center-top="opacity: 0.5" 
+			    			data--100-bottom="opacity: 0.3;"
+							data--150-bottom="opacity: 0.1;"
+							data--200-bottom="opacity: 0;"
+							data-anchor-target="#slide-3 div"
+						>
+							<div class="liste-projets">
+								<div id="projet1" class="projet" data-dialog="somedialog-1" class="trigger">
+									<div class="nom_projet1">Top Actuel</div>
+								</div>								
+								<div id="projet2" class="projet" data-dialog="somedialog-2" class="trigger">
+									<div class="nom_projet2">Viralité</div>
+								</div>
+								<div id="projet3" class="projet" data-dialog="somedialog-3" class="trigger">
+									<div class="nom_projet3">BLED</div>
+								</div>		
+								<div id="projet4" class="projet" data-dialog="somedialog-4" class="trigger">
+									<div class="nom_projet4">Through Bad Doors</div>
+								</div>
+								<div id="projet5" class="projet" data-dialog="somedialog-5" class="trigger">
+									<div class="nom_projet5">Péripéties Quotidiennes</div>
+								</div>
+								<div id="projet6" class="projet" data-dialog="somedialog-6" class="trigger">
+									<div class="nom_projet6">Découvrir L'Islam</div>
+								</div>
+							</div> <!-- / Liste Projets -->
+			    	</div> <!-- / hsContent Slide 3 -->
+			    </div> <!-- / hsContainer Slide 3 -->
+				</div> <!-- / positionnement bcg Slide 3 -->
+				
+				<!-- Pop-up Projets -->
+				<div id="somedialog-1" class="dialog">
+										<div class="dialog__overlay"></div>
+										<div class="dialog__content">
+											<div><button class="action" data-dialog-close>X</button></div>
+											<div><strong></br>TOP ACTUEL</strong></br>En tant que : chargé de production numérique</br></br>
+												<a href="http://livre.fnac.com/a6619285/Collectif-La-paye?NUMERICAL=Y&Origin=fnac_google#ficheDt">Lien vers l'eBook</a>
+											</div>
+										</div>
+								</div> 
+				<div id="somedialog-2" class="dialog">
+										<div class="dialog__overlay"></div>
+										<div class="dialog__content">
+											<div><button class="action" data-dialog-close>X</button></div>
+											<div><strong></br>Viralité</strong></br>En tant que : éditeur/scénariste monteur</br></br>
+												<a href="https://www.dropbox.com/s/vpnf7z9tyiadcfi/Montage.avi?dl=0">Lien vers la vidéo</a>
+											</div>
+										</div>
+								</div>
+				<div id="somedialog-3" class="dialog">
+										<div class="dialog__overlay"></div>
+										<div class="dialog__content">
+											<div><button class="action" data-dialog-close>X</button></div>
+											<div><strong></br>BLED</strong></br>En tant que : conseil</br></br>
+												<a href="http://livre.fnac.com/a6726287/Collectif-Culture-generale-Bled-etudes-superieures">Lien vers l'eBook</a>
+											</div>
+										</div>
+								</div> 
+				<div id="somedialog-4" class="dialog">
+										<div class="dialog__overlay"></div>
+										<div class="dialog__content">
+											<div><button class="action" data-dialog-close>X</button></div>
+											<div><strong></br>Through Bad Doors</strong></br>En tant que : graphiste (logo)</br></br>
+												<a href="https://www.dropbox.com/s/g26bntuxm5z2lwc/Logo_ThroughBadDoors_couleur.pdf?dl=0">Lien vers le logo</a>
+											</div>
+										</div>
+								</div>
+				<div id="somedialog-5" class="dialog">
+										<div class="dialog__overlay"></div>
+										<div class="dialog__content">
+											<div><button class="action" data-dialog-close>X</button></div>
+											<div><strong></br>Péripéties Quotidiennes</strong></br>En tant que : créateur/contributeur</br></br>
+												<a href="http://www.peripeties-quotidiennes.com/">Lien vers le site</a>
+											</div>
+										</div>
+								</div>
+				<div id="somedialog-6" class="dialog">
+										<div class="dialog__overlay"></div>
+										<div class="dialog__content">
+											<div><button class="action" data-dialog-close>X</button></div>
+											<div><strong></br>Découvrir L'Islam</strong></br>En tant que : éditeur/développeur</br></br>
+												<a href="https://www.dropbox.com/s/515kzamhbnsfcpp/Islam_Trailer.mp4?dl=0">Lien vers la vidéo</a>
+											</div>
+										</div>
+								</div>
+								<!-- / Pop-up Projets -->
+			</section> <!-- / Slide 3 -->
+			
+			
+			<!-- CONTACT -->
+			<section id="slide-4" class="homeSlide">
+				<div class="bcg" 
+					data-center="background-position: 50% 0px;" 
+					data-top-bottom="background-position: 50% -100px;" 
+					data-bottom-top="background-position: 50% 100px;" 
+					data-anchor-target="#slide-4 div"
+				>
+			    	<div class="hsContainer">
+						<div class="hsContent" 
+							data-bottom-top="opacity: 0" 
+							data-25p-top="opacity: 0" 
+							data-top="opacity: 1"  
+							data-anchor-target="#slide-4"
+						>
+							
+							<h2>Vous pouvez me contacter par mail (en utilisant ce formulaire) ou par téléphone.</h2>
+							<p class="adressemail">Mail : alexis_souchet@hotmail.fr</br></br>
+							Téléphone : 06 65 13 10 40</p>
+							<a id="linkedin" href="https://www.linkedin.com/pub/alexis-souchet/ab/381/791"><img src="img/linkedin_incone.svg"></a>
+							
+				    		<div id="form-main">
+								<div id="form-div">
+									<form class="form" id="form1" action="scriptphp4contact.php">
+
+									  <p class="name">
+										<input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Nom" id="name" />
+									  </p>
+
+									  <p class="email">
+										<input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" />
+									  </p>
+
+									  <p class="text">
+										<textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Message"></textarea>
+									  </p>
+
+									  <div class="submit">
+										<input type="submit" value="ENVOYER" id="button-purple"/>
+										<div class="ease"></div>
+									  </div>
+									</form>
+								</div>
+							</div>
+			    	</div>
+			    	
+			    </div>
+			</section>
+		</div>
+		<footer>
+		</footer>
+		    
+		</main> <!-- / Tag pour gestion Parallax avec JS -->
+		
+		<!-- Appels scripts pour Menu -->
+		<script src="js/jquery.dlmenu.js"></script>
+		<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
+        <script src="js/imagesloaded.js"></script>
+        <script src="js/skrollr.js"></script>
+        <script src="js/_main.js"></script>
+		
+		<script> <!-- Lancement Menu -->
+			$(function() {
+				$( '#menu' ).dlmenu();
+			});
+		</script>
+		
+		<script> <!-- Lancement Barres Competences -->
+			jQuery(document).ready(function(){
+				jQuery('.skillbar').each(function(){
+				jQuery(this).find('.skillbar-bar').animate({
+					width:jQuery(this).attr('data-percent')
+					},6000);
+				});
+			});
+		</script>
+		
+		<script> <!-- Lancement Pop Up (dialog) -->
+			(function() {
+ 
+    [].slice.call( document.querySelectorAll( '[data-dialog]' ) ).forEach( function( trigger ) {
+        var dlg = new DialogFx( document.getElementById( trigger.getAttribute( 'data-dialog' ) ) );
+ 
+        trigger.addEventListener( 'click', dlg.toggle.bind(dlg) );
+    } );
+ 
+})();
+		</script>
+	</body>
+</html>
